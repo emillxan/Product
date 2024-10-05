@@ -1,0 +1,49 @@
+﻿<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <h2>Список изделий</h2>
+            <div class="mb-3">
+                <input type="text" id="searchProduct" class="form-control" placeholder="Введите имя изделия...">
+                <button id="searchBtn" class="btn btn-primary mt-2">Поиск</button>
+                <button id="addProductBtn" class="btn btn-success mt-2" data-bs-toggle="modal" data-bs-target="#productModal">Создать продукт</button>
+            </div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Имя</th>
+                        <th>Описание</th>
+                        <th>Действия</th>
+                    </tr>
+                </thead>
+                <tbody id="productTableBody">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel">Создать продукт</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <form id="productForm">
+                    <input type="hidden" id="productId" />
+                    <div class="mb-3">
+                        <label for="productName" class="form-label">Имя</label>
+                        <input type="text" class="form-control" id="productName" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="productDescription" class="form-label">Описание</label>
+                        <input type="text" class="form-control" id="productDescription" required />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
